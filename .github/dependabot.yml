@@ -1,0 +1,32 @@
+version: 2
+updates:
+- package-ecosystem: maven
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: org.springdoc:springdoc-openapi-ui
+    versions:
+    - 1.5.5
+    - 1.5.6
+    - 1.5.7
+  - dependency-name: org.springframework.boot:spring-boot-starter-parent
+    versions:
+    - 2.4.3
+    - 2.4.4
+  - dependency-name: org.apache.avro:avro-maven-plugin
+    versions:
+    - 1.10.1
+  - dependency-name: org.apache.avro:avro
+    versions:
+    - 1.10.1
+  - dependency-name: org.springframework.cloud:spring-cloud-dependencies
+    versions:
+    - Hoxton.SR10
+  - dependency-name: io.confluent:kafka-avro-serializer
+    versions:
+    - 6.1.0
+  - dependency-name: io.confluent:kafka-streams-avro-serde
+    versions:
+    - 6.1.0
